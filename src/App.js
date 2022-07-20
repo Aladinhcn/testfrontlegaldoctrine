@@ -1,9 +1,13 @@
-import './App.css';
-
+import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
+import { Typography } from "@mui/material";
+import theme from "./theme/theme";
 function App() {
   return (
-    <div className="App">
-    </div>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <Typography variant="h1">hi there</Typography>
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 }
 
