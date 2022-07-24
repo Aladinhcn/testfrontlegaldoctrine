@@ -6,7 +6,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import { formatCurrency } from "../../utils/utils";
 
 export const CartItems = ({ product }) => {
-  const { increase, decrease, discountBread, discountMilk } =
+  const { increase, decrease} =
     useContext(CartContext);
 
   return (
