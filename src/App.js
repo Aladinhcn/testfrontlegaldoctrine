@@ -1,12 +1,14 @@
+import { useRoutes } from "react-router-dom";
 import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
-import { Typography } from "@mui/material";
-import theme from "./theme/theme";
+
+import { theme } from "./theme";
+import  routes  from "./routes";
+
 function App() {
+  const content = useRoutes(routes);
   return (
     <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme}>
-        <Typography variant="h1">hi there</Typography>
-      </ThemeProvider>
+      <ThemeProvider theme={theme}>{content}</ThemeProvider>
     </StyledEngineProvider>
   );
 }
