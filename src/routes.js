@@ -4,7 +4,7 @@ import CartState from "./context/cart/CartState";
 
 const routes = [
   {
-    path: "/products",
+    path: "/",
     element: (
       <CartState>
         <Products />
